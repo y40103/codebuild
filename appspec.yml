@@ -3,8 +3,8 @@ os: linux
 
 # 定义源文件和目标位置
 files:
-  - source: /app/
-    destination: /tmp/
+  - source: /tmp/
+    destination: /home/ubuntu/
 
 # 钩子：在不同的部署阶段执行的脚本
 hooks:
