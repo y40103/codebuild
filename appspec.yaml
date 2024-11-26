@@ -1,0 +1,30 @@
+version: 0.0
+os: linux
+
+# 定义源文件和目标位置
+files:
+  - source: /app/
+    destination: /tmp/
+
+# 钩子：在不同的部署阶段执行的脚本
+hooks:
+  BeforeInstall:
+    - location: scripts/beforeinstall.sh
+      timeout: 180
+      runas: root
+  
+  AfterInstall:
+    - location: scripts/afterinstall.sh
+      timeout: 300
+      runas: root
+  
+  ApplicationStart:
+    - location: scripts/application.sh
+      timeout: 300
+      runas: root
+  
+  ValidateService:
+    - location: scripts/validation.sh
+      timeout: 60
+      runas: root
+
