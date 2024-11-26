@@ -1,10 +1,9 @@
 version: 0.0
 os: linux
 
-# 定义源文件和目标位置
 files:
-  - source: /tmp/
-    destination: /home/ubuntu/
+  - source: appspec.yml
+    destination: /tmp/
 
 # 钩子：在不同的部署阶段执行的脚本
 hooks:
