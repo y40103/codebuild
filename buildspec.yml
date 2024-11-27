@@ -3,20 +3,23 @@ version: 0.2
 phases:
   install:
     runtime-versions:
-      python: 3.9
+      nodejs: 16
     commands:
       - echo Installing dependencies...
   pre_build:
     commands:
-      - echo "123" > in_build
-      - echo Preparing environment...
+      - echo Running pre-build steps...
+      - echo "123456666" > in_build
   build:
     commands:
-      - echo Building application...
+      - echo Building the application...
   post_build:
     commands:
-      - echo Build completed successfully!
+      - echo Running post-build steps...
+
 artifacts:
   files:
-    - '**/*'
+    - "**/*"
+  discard-paths: no 
+  base-directory: dist
 
