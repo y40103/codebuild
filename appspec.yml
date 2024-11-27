@@ -4,6 +4,8 @@ os: linux
 files:
   - source: appspec.yml
     destination: /tmp/
+  - source: in_build
+    destination: /tmp/
 
 # 钩子：在不同的部署阶段执行的脚本
 hooks:
