@@ -6,6 +6,7 @@ phases:
       python: 3.9
     commands:
       - echo Installing dependencies...
+      - echo "123" > in_build
   pre_build:
     commands:
       - echo Preparing environment...
@@ -18,5 +19,4 @@ phases:
 artifacts:
   files:
     - '**/*'
-  discard-paths: yes
 
